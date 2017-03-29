@@ -1,0 +1,8 @@
+- obj.each do |seller|
+	.row
+		.col-sm-8.col-sm-offset-2
+			.well
+				.seller-title
+					= link_to seller.name, seller_path(seller)
+				.seller-phone
+					= seller.phone

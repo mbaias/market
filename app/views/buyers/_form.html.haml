@@ -1,0 +1,36 @@
+.row
+	.col-sm-12
+		= form_for(@buyer, :html => {class: "form-horizontal", role: "form"}) do |f|
+			.form-group
+				.control-label.col-sm-2
+					= f.label :name
+				.col-sm-8
+					= f.text_field :name, class: "form-control", placeholder: "Buyer's Name", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :password
+				.col-sm-8
+					= f.password_field :password, class: "form-control", placeholder: "password", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :password_confirmation
+				.col-sm-8
+					= f.password_field :password_confirmation, class: "form-control", placeholder: "password_confirmation", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :address
+				.col-sm-8
+					= f.text_field :address, class: "form-control", placeholder: "Address", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :phone
+				.col-sm-8
+					= f.text_field :phone, class: "form-control", placeholder: "phone", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :email
+				.col-sm-8
+					= f.text_field :email, class: "form-control", placeholder: "email", autofocus: true
+			.form-group
+				.col-sm-offset-2.col-sm-10
+					= f.submit( class: "btn btn-primary btn-sm")

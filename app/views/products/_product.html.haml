@@ -1,0 +1,8 @@
+- obj.each do |product|
+	.row
+		.col-sm-8.col-sm-offset-2
+			.well
+				.product-title
+					= link_to product.title, product_path(product)
+				.product-price
+					= product.price

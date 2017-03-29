@@ -1,0 +1,5 @@
+%h1{:align => "center"} Sellers
+.add-seller
+	= link_to "add", new_seller_path, class: "btn btn-sm btn-primary"
+= will_paginate
+= render 'seller', obj: @sellers

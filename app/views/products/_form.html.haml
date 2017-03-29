@@ -1,0 +1,22 @@
+.row
+	.col-sm-12
+		= form_for(@product, :html => {class: "form-horizontal", role: "form"}) do |f|
+
+			.form-group
+				.control-label.col-sm-2
+					= f.label :title
+				.col-sm-8
+					= f.text_field :title, class: "form-control", placeholder: "Enter product's title", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :description
+				.col-sm-8
+					= f.text_field :description, class: "form-control", placeholder: "Enter description", autofocus: true
+			.form-group
+				.control-label.col-sm-2
+					= f.label :price
+				.col-sm-8
+					= f.number_field :price, placeholder: "Enter price", autofocus: true
+			.form-group
+				.col-sm-offset-2.col-sm-10
+					= f.submit(@product.new_record? ? "create" : "update", class: "btn btn-primary btn-sm")
